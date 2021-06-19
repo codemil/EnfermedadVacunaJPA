@@ -7,7 +7,6 @@ package Dao;
 
 import java.io.Serializable;
 import java.lang.reflect.ParameterizedType;
-import java.util.ArrayList;
 import java.util.List;
 import org.hibernate.Session;
 import util.HibernateUtil;

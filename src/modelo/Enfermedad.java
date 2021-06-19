@@ -8,6 +8,7 @@ package modelo;
 import java.io.Serializable;
 import java.util.HashSet;
 import java.util.Set;
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -43,7 +44,7 @@ public class Enfermedad implements Serializable {
         @JoinColumn(name = "ID_ENFERMEDAD", referencedColumnName = "ID")},
             inverseJoinColumns = {
                 @JoinColumn(name = "ID_VACUNA", referencedColumnName = "ID")})
-    @ManyToMany
+    @ManyToMany(cascade = CascadeType.ALL)
     private Set<Vacuna> vacunas;
 
     public Enfermedad() {
